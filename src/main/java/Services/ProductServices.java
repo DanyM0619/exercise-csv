@@ -39,7 +39,7 @@ public class ProductServices {
             while (scanner.hasNextLine()) {
                 String linea = scanner.nextLine();
                 String[] campos = linea.split(",");
-
+                //Si los campos son iguales o superan los 8 no se puede guardar o buscar el producto
                 if (campos.length == 7) {
                     int code = Integer.parseInt(campos[0].trim());
                     String nombre = campos[1].trim();
@@ -55,7 +55,6 @@ public class ProductServices {
 
                     RemoveToString remove = new RemoveToString(code, nombre, descripcion, categoria, etiqueta, precio, url);
                     System.out.println(remove);
-
 
                 }
             }

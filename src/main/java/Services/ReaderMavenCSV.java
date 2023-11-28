@@ -31,7 +31,7 @@ public class ReaderMavenCSV {
                     primeraFila = false;
                     continue;
                 }
-
+                //Solo se muestra los campos a través del archivo csv
                 int codigo = Integer.parseInt(csvRecord.get(0));
                 String nombre = csvRecord.get(1);
                 String descripcion = csvRecord.get(2);
@@ -47,7 +47,8 @@ public class ReaderMavenCSV {
                 System.out.println(remove);
             }
         } catch(IOException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 }
